@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NarvbarComponent } from './narvbar.component';
 
@@ -7,7 +7,7 @@ describe('NarvbarComponent', () => {
   let fixture: ComponentFixture<NarvbarComponent>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
+    TestBed.configureTestingModule({
       declarations: [ NarvbarComponent ]
     })
     .compileComponents();
