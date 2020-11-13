@@ -3,10 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NarvbarComponent } from './narvbar/narvbar.component';
+import { SearchComponent } from './search/search.component';
+import { ProfileFormComponent } from './profile-form/profile-form.component';
+import { ReposComponent } from './repos/repos.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NarvbarComponent,
+    SearchComponent,
+    ProfileFormComponent,
+    ReposComponent
   ],
   imports: [
     BrowserModule,
