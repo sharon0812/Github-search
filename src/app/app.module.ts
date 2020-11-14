@@ -9,19 +9,22 @@ import { SearchComponent } from './search/search.component';
 
 import { ReposComponent } from './repos/repos.component';
 import { SearchFormComponent } from './search-form/search-form.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NarvbarComponent,
     SearchComponent,
-    
     ReposComponent,
-    SearchFormComponent
+    SearchFormComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [],
