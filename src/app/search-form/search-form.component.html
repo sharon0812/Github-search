@@ -3,7 +3,7 @@
      
         <h2 style="color:blue">Search your Repositories here using gitHub Username</h2>
         <div class="col-md-6" style="padding-top: 2px;">
-            <form class="form-inline md-form mr-auto mb-4"#name="ngForm">
+            <form class="form-inline md-form mr-auto mb-4">
                 <input class="form-control  mr-sm-2" type="text" placeholder="Enter GitHub name" aria-label="Search" [(ngModel)] ="UserName" name="UserName">
                 <button mdbBtn size="sm" gradient="aqua" rounded="true" class="my-0 waves-light btn btn-success" mdbWavesEffect
                     type="submit" (click)="get()">Search user</button>
@@ -13,3 +13,7 @@
     </div>
 
 </div>
+
+<!-- <div>
+    <input type="text" [(ngModel)]='UserName' name="UserName" (keyup)='get()'>
+</div> -->
