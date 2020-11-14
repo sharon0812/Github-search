@@ -1,2 +1,61 @@
+<div class="container">
+ <div class="row">
+   <div class="col">
+    <app-search-form (emitSearch)="searchUser($event)"></app-search-form>
+   </div>
+ </div>
+  <div class="row"  *ngFor='let user of users'>
+    <div class="col-md-6">
+      <img src="{{user.avatar_url}}" alt="">
 
-<app-search-form></app-search-form>
+    </div>
+    
+      <div class="col-md-6">
+        <div>
+          <p class="text-light">Name:&nbsp;&nbsp;{{user.name}}</p>
+        </div>
+        <div>
+          <p class="text-light">Username:&nbsp;&nbsp;{{user.login}}</p>
+        </div>
+        
+        <div>
+          <p class="btn btn-warning">Following:&nbsp;&nbsp;{{user.following}}</p>
+        </div>
+        <div>
+          <p class="btn btn-success">Followers:&nbsp;&nbsp;{{user.followers}}</p>
+        </div>
+        <div>
+          <p class="btn btn-success">Public Repos:&nbsp;&nbsp;{{user.public_repos}}</p>
+        </div>
+        <div>
+          <p class="btn btn-success">Date created:&nbsp;&nbsp;{{user.created_at|date}}</p>
+        </div>
+        <div>
+          <a href="{{user.html_url}}" class="btn btn-primary" target="_blank">See Github </a>
+        </div>
+        
+      </div>
+  </div>
+</div> 
+
+<h2 class="text-center text-light">Github Repositories</h2>
+<div class="container">
+  <div class="row">
+      <div class="col-md-6 pb-5" *ngFor='let repo of repos'>
+          <div class="card">
+            <div class="card-header">
+              <p style="font-weight: bold; font-size: 30px; text-align: center;">Name:{{repo.name}}</p>
+            </div>
+            <div class="card-body">
+              <p>Description:{{repo.description}}</p>
+              <p>Language used:{{repo.language}}</p>
+              <p>Date created:{{repo.created_at| date}}</p>
+            </div>
+            <div class="card-footer text-center">
+              <a href="{{repo.html_url}}" class="btn btn-primary" target="_blank">View on Github </a>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+
