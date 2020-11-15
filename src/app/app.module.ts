@@ -10,6 +10,7 @@ import { SearchComponent } from './search/search.component';
 import { ReposComponent } from './repos/repos.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HighlightDirective } from './highlight.directive';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     SearchComponent,
     ReposComponent,
     SearchFormComponent,
+    HighlightDirective,
    
   ],
   imports: [
